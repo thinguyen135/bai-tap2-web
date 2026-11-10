@@ -23,7 +23,6 @@
             margin-bottom: 1em;
         }
 
-        /* Nhãn có độ rộng 16em để chứa vừa các câu khảo sát dài */
         label {
             float: left;
             width: 16em;
@@ -32,33 +31,14 @@
             margin-bottom: 0.6em;
         }
 
-        /* Dữ liệu người dùng nhập hiển thị màu xanh dịu mắt, dễ phân biệt */
         span {
             color: #0056b3;
             display: inline-block;
             margin-bottom: 0.6em;
         }
 
-        /* Cực kỳ quan trọng: ngắt dòng và xóa float để không bị lệch cột */
         br {
             clear: both;
-        }
-
-        /* Nút bấm Return đẹp và đồng bộ với màu tiêu đề */
-        input[type="submit"] {
-            background-color: teal;
-            color: white;
-            border: none;
-            padding: 8px 20px;
-            font-size: 11pt;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 0.5em;
-            transition: background-color 0.2s;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #006666;
         }
     </style>
 </head>
