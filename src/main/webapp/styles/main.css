@@ -17,20 +17,35 @@ body {
 h1 {
     color: teal;
 }
-label{
+
+label {
     float: left;
-    width: 6em;
+    width: 7em;
     margin-bottom: 0.5em;
 }
-input[type="text"], input[type="email"]{
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
     width: 15em;
     margin-left: 0.5em;
     margin-bottom: 0.5em;
 }
-br{
+
+br {
     clear: both;
 }
 
-#submit{
+#submit {
     margin-left: 0.5em;
+}
+
+select {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+option {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
 }

@@ -6,8 +6,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
+import com.mycompany.baitap1.murach.business.Survey;
 import com.mycompany.baitap1.murach.business.User;
-import com.mycompany.baitap1.murach.data.UserDB;
 
 public class EmailListServlet extends HttpServlet {
     @Override
@@ -26,11 +27,26 @@ public class EmailListServlet extends HttpServlet {
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
+            String dateOfBirth = request.getParameter("dateOfBirth");
+            String checkBox1 = request.getParameter("checkbox1");
+            String checkBox2 = request.getParameter("checkbox2");
+            String contactVia = request.getParameter("contactVia");
+            String contactMethod = request.getParameter("contact_method");
 
-            User user = new User(firstName, lastName, email);
-            UserDB.insert(user);
+
+            if (checkBox1 == null) {
+                checkBox1 = "";
+            }
+
+            if (checkBox2 == null) {
+                checkBox2 = "";
+            }
+
+            User user = new User(firstName, lastName, email, dateOfBirth);
+            Survey survey = new Survey(contactVia, checkBox1, checkBox2, contactMethod);
 
             request.setAttribute("user", user);
+            request.setAttribute("survey", survey);
             url = "/thanks.jsp";
         }
 
